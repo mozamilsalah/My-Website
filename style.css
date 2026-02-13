@@ -207,13 +207,3 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
-    .nav ul {
-        gap: 8px;
-    }
-    
-    .nav a {
-        font-size: 14px;
-        padding: 5px;
-    }
-}
