@@ -320,7 +320,7 @@ footer{
     }
 }
 
-v ul {
+.nav ul {
     flex-direction: row !important;
     flex-wrap: wrap !important;
 }
