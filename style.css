@@ -44,6 +44,7 @@ header{
     gap:20px;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
 }
 
 .nav a{
@@ -240,6 +241,8 @@ footer{
     .nav ul {
         justify-content: center;
         gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     .hero {
@@ -270,7 +273,7 @@ footer{
 @media(max-width:480px){
     .nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         width: 100%;
     }
     
@@ -279,6 +282,7 @@ footer{
     }
     
     .nav a {
+        font-size: 120x;
         display: block;
         padding: 8px;
         background: rgba(255,255,255,0.1);
@@ -314,4 +318,9 @@ footer{
     footer {
         padding: 15px 10px;
     }
+}
+
+v ul {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
 }
