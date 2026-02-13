@@ -1,205 +1,393 @@
-
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+You sent
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
+body {
     direction: rtl;
+    min-height: 100vh;
+    overflow-x: hidden; /* يمنع التمرير الأفقي */
+    width: 100%;
+    max-width: 100%;
 }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px; /* إضافة padding داخلي */
 }
 
-header{
-    background:#111;
-    padding:15px 0;
+header {
+    background: #111;
+    padding: 15px 0;
+    width: 100%;
 }
 
-.nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* للالتفاف على الجوال */
+    gap: 15px;
 }
 
-.logo{
-    color:#fff;
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
-.nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* للالتفاف على الجوال */
+    justify-content: center;
 }
 
-.nav a{
-    color:#fff;
-    text-decoration:none;
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 0;
+    display: inline-block;
 }
 
-.hero{
-    background:#f4f4f4;
-    padding:60px 0;
+.hero {
+    background: #f4f4f4;
+    padding: 60px 0;
+    width: 100%;
 }
 
-.hero-content{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:40px;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
 }
 
-.hero img{
-    width:350px;
-    border-radius:10px;
+.hero-content .text {
+    flex: 1;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#007bff;
-    color:#fff;
-    text-decoration:none;
-    border-radius:5px;
+.hero-content .image {
+    flex: 1;
+    text-align: center;
 }
 
-.section{
-    padding:60px 0;
+.hero img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    height: auto;
 }
 
-.about{
-    display:flex;
-    align-items:center;
-    gap:40px;
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-.about img{
-    width:300px;
-    border-radius:10px;
+.section {
+    padding: 60px 0;
+    width: 100%;
 }
 
-.center{
-    text-align:center;
-    margin-bottom:30px;
+.about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
 }
 
-        /* ================= SKILLS ================= */
-
-   .skills {
-            padding: 60px 20px;
-            background: #f4f4f4;;
-        }
-
-        .skills h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .skill {
-            margin-bottom: 20px;
-        }
-
-        .skill span {
-            display: blcok;
-            margin-bottom: 5px;
-        }
-
-        .skill-bar {
-            background: #ddd;
-            width: 50%;
-            height: 25p;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .skill-fill {
-            height: 100%;
-            background: #2196f3;
-            text-align: left;
-            padding-left: 10px;
-            color: #fff;
-            line-height: 25px;
-            font-size: 14px;
-        }
-.card{
-    background:#eee;
-    padding:20px;
-    text-align:center;
-    border-radius:8px;
+.about > div {
+    flex: 1;
 }
 
+.about img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    width: 100%;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skill {
+    margin-bottom: 20px;
+    max-width: 600px; /* للتحكم بالعرض */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    background: #ddd;
+    width: 100%;
+    height: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: #2196f3;
+    text-align: left;
+    padding-left: 10px;
+    color: #fff;
+    line-height: 25px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.card {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  padding-bottom: 15px;
-  padding: 30px 20px;
-  min-height: 150px;
- transition: 0.7s ease;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 30px 20px;
+    min-height: 150px;
+    transition: 0.7s ease;
+    width: 100%;
 }
 
 .project-card:hover {
-    transform: scale(1.1)
+    transform: scale(1.05); /* تعديل بسيط */
 }
 
 .project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    max-width:500px;
-    margin:auto;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
 }
 
 .contact-form input,
-.contact-form textarea{
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px; /* لمنع التكبير على الجوال */
 }
 
-.contact-form button{
-    padding:10px;
-    border:none;
-    background:#007bff;
-    color:#fff;
-    border-radius:5px;
+.contact-form button {
+    padding: 12px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
 }
 
-footer{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:15px 0;
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
 }
 
-/* Responsive */
-@media(max-width:768px){
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* للأجهزة المتوسطة */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero-content {
+        gap: 20px;
+    }
+}
+
+/* للأجهزة اللوحية والجوال */
+@media screen and (max-width: 768px) {
     .hero-content,
-    .about{
+    .about {
         flex-direction: column;
-        text-align:center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nav a {
+        font-size: 0.95rem;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero img {
+        max-width: 280px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .about img {
+        max-width: 250px;
+    }
+    
+    .skills {
+        padding: 40px 15px;
+    }
+    
+    .skill {
+        max-width: 100%;
+    }
+    
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/* للجوال الصغير */
+@media screen and (max-width: 480px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .nav li {
+        width: 100%;
+    }
+    
+    .nav a {
+        display: block;
+        padding: 8px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero img {
+        max-width: 220px;
+    }
+    
+    .about img {
+        max-width: 200px;
+    }
+    
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-card:hover {
+        transform: scale(1.02);
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 16px; /* يمنع التكبير التلقائي */
+    }
+    
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero img {
+        max-width: 180px;
     }
 }
